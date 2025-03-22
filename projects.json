@@ -1,56 +1,56 @@
 [
   {
     "title": "NUS Datathon 2025 Winner: Recommendation System for Agent–Client Matching",
-    "image": "/images/agent_client_matching.jpg",
+    "image": "./images/agent_client_matching.jpg",
     "description": "Developed a multi-view recommendation system that integrates metric learning, agent–product ratings, and demographic similarity to rank financial advisors using an XGBoost classifier. Winner of NUS Datathon 2025.",
     "tags": ["Siamese NN", "XGBoost", "ML", "Recommendation"],
     "link": "https://github.com/ouch528/datathon2025"
   },
   {
     "title": "Reinforcement Learning Trading Strategies",
-    "image": "/images/rl_trading.jpeg",
+    "image": "./images/rl_trading.jpeg",
     "description": "Optimized interpretable reinforcement learning trading strategies using PPO and advanced state space augmentation, achieving up to 5% higher cumulative returns in simulated environments.",
     "tags": ["Reinforcement Learning", "PPO", "Trading", "Python"],
     "link": "https://github.com/NUSFintechQuant/AY2425-RL-Trading"
   },
   {
     "title": "Beijing Housing Market Analysis",
-    "image": "/images/beijing_housing.jpg",
+    "image": "./images/beijing_housing.jpg",
     "description": "Analyzed Beijing's housing market trends (2011–2017) to uncover a sixfold surge in transaction volume and significant price increases, delivering actionable investment insights.",
     "tags": ["Data Analysis", "Market Trends", "ROI"],
     "link": ""
   },
   {
     "title": "Quantitative Trading System",
-    "image": "/images/quant_trading.jpeg",
+    "image": "./images/quant_trading.jpeg",
     "description": "Implemented a trading system leveraging pair trading and mean reversion strategies.",
     "tags": ["Algorithmic Trading", "Quantitative Analysis", "Python"],
     "link": "https://github.com/xaviersh0129/Trading"
   },
   {
     "title": "Spotifynd (Spotify Recommendation System)",
-    "image": "/images/spotify_recommendation.jpg",
+    "image": "./images/spotify_recommendation.jpg",
     "description": "Built a personalized music recommendation system that curates playlists based on user listening habits and preferences.",
     "tags": ["Recommendation", "Machine Learning", "Python"],
     "link": "https://github.com/ouch528/Spotifynd"
   },
   {
     "title": "LifeHack-2024: Police Station Finder",
-    "image": "/images/police_station_finder.jpg",
+    "image": "./images/police_station_finder.jpg",
     "description": "Developed an application to help users quickly locate nearby police stations, enhancing public safety and accessibility.",
     "tags": ["Web App", "Geolocation", "JavaScript"],
     "link": "https://github.com/xaviersh0129/LifeHack-2024"
   },
   {
     "title": "Hack&Roll 2025: CourseRank",
-    "image": "/images/courserank.png",
+    "image": "./images/courserank.png",
     "description": "Created a platform that ranks and compares university courses using multiple metrics to aid students in making informed academic decisions.",
     "tags": ["Data Analysis", "Web App", "Hackathon"],
     "link": "https://github.com/ouch528/CourseRank"
   },
   {
     "title": "Quantify",
-    "image": "/images/quantify.jpg",
+    "image": "./images/quantify.jpg",
     "description": "Developed a machine learning project for stock price forecasting using ARIMA and GARCH models, improving forecast accuracy by 25%.",
     "tags": ["ARIMA", "GARCH", "Forecasting", "Flask"],
     "link": "https://github.com/YuvBindal/Quantify"
