@@ -68,7 +68,7 @@ export default defineComponent({
     onMounted(async () => {
       // Fetch the contact data from public/contact.json
       try {
-        const response = await fetch('/contact.json')
+        const response = await fetch('./contact.json')
         if (!response.ok) {
           throw new Error('Failed to fetch contact data')
         }
@@ -203,5 +203,40 @@ export default defineComponent({
 }
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
+}
+
+@media (max-width: 600px) {
+  /* Adjust contact section padding */
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Reduce header gap and icon size */
+  .contact-header {
+    gap: 0.25rem;
+  }
+  .contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Scale down title font size */
+  .contact-title {
+    font-size: 1.75rem;
+  }
+  
+  /* Adjust intro card padding and paragraph font size */
+  .contact-intro {
+    padding: 1.5rem;
+  }
+  .contact-intro p {
+    font-size: 1rem;
+  }
+  
+  /* Stack social links vertically */
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 </style>

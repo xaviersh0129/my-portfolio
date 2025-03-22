@@ -10,7 +10,7 @@
       <!-- Projects Grid -->
       <div class="projects-grid">
         <button
-          v-for="(project, index) in projects"
+          v-for="(project, index) in displayedProjects"
           :key="index"
           class="project-card card-hover"
           type="button"
@@ -39,12 +39,17 @@
           </div>
         </button>
       </div>
+      <div v-if="projects.length > 4" class="show-more-container" style="text-align: center; margin-top: 1rem;">
+        <button @click="toggleShowProjects" class="show-more-button" style="padding: 1rem 2rem; font-size: 1.25rem; border: none; background-color: #6366f1; color: #fff; border-radius: 0.5rem; cursor: pointer;">
+          {{ showAllProjects ? 'Show Less' : 'Show More' }}
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
+import { defineComponent, ref, computed, onMounted } from 'vue'
 import { Code2 } from 'lucide-vue-next'
 
 export default defineComponent({
@@ -52,11 +57,20 @@ export default defineComponent({
   components: { Code2 },
   setup() {
     const projects = ref<any[]>([])
+    const showAllProjects = ref(false)
+
+    const displayedProjects = computed(() => {
+      return showAllProjects.value ? projects.value : projects.value.slice(0, 4)
+    })
+
+    const toggleShowProjects = () => {
+      showAllProjects.value = !showAllProjects.value
+    }
 
     // Load the projects from JSON
     onMounted(async () => {
       try {
-        const response = await fetch('/projects.json')
+        const response = await fetch('./projects.json')
         if (!response.ok) {
           throw new Error('Failed to fetch projects data')
         }
@@ -93,7 +107,7 @@ export default defineComponent({
       }
     }
 
-    return { projects, goToLink }
+    return { projects, goToLink, showAllProjects, displayedProjects, toggleShowProjects }
   }
 })
 </script>
@@ -253,5 +267,39 @@ export default defineComponent({
 
 .skill-tag:hover {
   background-color: #dbeafe; 
+}
+
+@media (max-width: 600px) {
+  /* Adjust projects section padding */
+  .projects-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Stack header elements vertically */
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  /* Scale down title font size */
+  .projects-title {
+    font-size: 1.75rem;
+  }
+  
+  /* Adjust projects grid to a single column layout */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reduce project image wrapper height */
+  .project-image-wrapper {
+    height: 10rem;
+  }
+  
+  /* Adjust project content padding */
+  .project-content {
+    padding: 1rem;
+  }
 }
 </style>

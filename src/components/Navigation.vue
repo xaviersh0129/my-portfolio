@@ -1,25 +1,45 @@
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 
-  <script lang="ts">
-  import { defineComponent } from 'vue'
-  export default defineComponent({
-    name: 'Navigation'
-  })
-  </script>
+export default defineComponent({
+  name: 'Navigation',
+  setup() {
+    const isOpen = ref(false)
+
+    const toggleMenu = () => {
+      isOpen.value = !isOpen.value
+    }
+
+    const closeMenu = () => {
+      isOpen.value = false
+    }
+
+    return { isOpen, toggleMenu, closeMenu }
+  }
+})
+</script>
 
 <template>
   <nav class="navbar">
     <div class="navbar-container">
-      <!-- Logo / Brand -->
+      <!-- Logo -->
       <a href="#" class="navbar-logo">Xavier Hua</a>
-      
-      <!-- Navigation Links -->
-      <ul class="navbar-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" @click="toggleMenu">
+        <span :class="{ open: isOpen }"></span>
+        <span :class="{ open: isOpen }"></span>
+        <span :class="{ open: isOpen }"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <ul :class="['navbar-links', { show: isOpen }]">
+        <li><a href="#about" @click="closeMenu">About</a></li>
+        <li><a href="#skills" @click="closeMenu">Skills</a></li>
+        <li><a href="#experience" @click="closeMenu">Experience</a></li>
+        <li><a href="#projects" @click="closeMenu">Projects</a></li>
+        <li><a href="#education" @click="closeMenu">Education</a></li>
+        <li><a href="#contact" @click="closeMenu">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -39,35 +59,28 @@
   top: 0;
   z-index: 50;
   background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Inner container for spacing and layout */
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1rem; /* Adjust as needed */
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2rem;
 }
 
-/* LOGO */
 .navbar-logo {
-  background: linear-gradient(to right, #6366f1, #a855f7); 
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #6366f1, #a855f7);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 0.2s;
-  font-size: 1.5rem;
 }
 
-.navbar-logo:hover {
-  opacity: 0.8;
-}
-
-/* NAV LINKS */
+/* Nav links for desktop */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -75,13 +88,55 @@
 }
 
 .navbar-links a {
-  color: #374151; /* text-gray-700 */
   text-decoration: none;
+  color: #374151;
   font-weight: 500;
-  transition: color 0.2s;
 }
 
 .navbar-links a:hover {
-  color: #111827; /* text-gray-900 */
+  color: #111827;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #6366f1;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    display: none;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
 }
 </style>

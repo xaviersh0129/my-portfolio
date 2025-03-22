@@ -1,7 +1,7 @@
 [
     {
       "university": "National University of Singapore",
-      "image": "/images/nus.png",
+      "image": "./images/nus.png",
       "imageAlt": "NUS",
       "degree": "Bachelor of Science in Business Analytics",
       "minor": "Quantitative Finance",

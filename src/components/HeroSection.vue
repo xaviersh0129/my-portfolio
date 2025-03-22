@@ -59,7 +59,7 @@ export default defineComponent({
     onMounted(async () => {
       try {
         // Fetch the hero data from public/hero.json
-        const response = await fetch('/hero.json')
+        const response = await fetch('./hero.json')
         if (!response.ok) {
           throw new Error('Failed to fetch hero data')
         }
@@ -214,6 +214,39 @@ export default defineComponent({
   }
   60% {
     transform: translate(-50%, -5px);
+  }
+}
+
+@media (max-width: 600px) {
+  /* Adjust hero section padding and min-height */
+  .hero-section {
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+  /* Scale down profile image */
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Adjust hero title and gradient text font sizes */
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .gradient-text {
+    font-size: 2.5rem;
+  }
+  
+  /* Adjust subtitle font size */
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Stack buttons vertically */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 </style>

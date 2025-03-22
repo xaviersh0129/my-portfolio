@@ -28,7 +28,7 @@ export default defineComponent({
 
     onMounted(async () => {
       // Fetch the text from public/aboutContent.txt
-      const response = await fetch('/aboutContent.txt')
+      const response = await fetch('./aboutContent.txt')
       aboutText.value = await response.text()
     })
 
@@ -81,5 +81,27 @@ export default defineComponent({
   color: #4b5563;      /* ~text-gray-600 */
   line-height: 1.75;   /* ~leading-relaxed */
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  /* Reduce padding for the about section */
+  .about-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Adjust container padding for mobile */
+  .about-container {
+    padding: 0 1rem;
+  }
+  
+  /* Scale down the title font size */
+  .about-title {
+    font-size: 1.75rem;
+  }
+  
+  /* Adjust paragraph font size */
+  .about-paragraph {
+    font-size: 1rem;
+  }
 }
 </style>

@@ -53,7 +53,7 @@ export default defineComponent({
     onMounted(async () => {
       try {
         // Fetch the JSON from public/education.json
-        const response = await fetch('/education.json')
+        const response = await fetch('./education.json')
         if (!response.ok) {
           throw new Error('Failed to fetch education data')
         }
@@ -192,5 +192,44 @@ export default defineComponent({
 }
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
+}
+
+@media (max-width: 600px) {
+  /* Adjust education section padding */
+  .education-section {
+    padding: 40px 8px;
+  }
+
+  /* Adjust header layout for smaller screens */
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Scale down the education title font size */
+  .education-title {
+    font-size: 28px;
+  }
+
+  /* Stack education card content vertically */
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adjust image size and spacing */
+  .education-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  /* Center align education details */
+  .education-details {
+    align-items: center;
+  }
 }
 </style>

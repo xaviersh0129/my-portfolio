@@ -10,7 +10,7 @@
       <!-- Experience Cards -->
       <div class="experience-cards">
         <div
-          v-for="(job, index) in jobs"
+          v-for="(job, index) in displayedJobs"
           :key="index"
           class="experience-card"
         >
@@ -25,12 +25,17 @@
           </ul>
         </div>
       </div>
+      <div v-if="jobs.length > 4" class="show-more-container" style="text-align: center; margin-top: 1rem;">
+        <button @click="toggleShowExperiences" class="show-more-button" style="padding: 1rem 2rem; font-size: 1.25rem; border: none; background-color: #6366f1; color: #fff; border-radius: 0.5rem; cursor: pointer;">
+          {{ showAllExperiences ? 'Show Less' : 'Show More' }}
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
+import { defineComponent, ref, computed, onMounted } from 'vue'
 import { Briefcase } from 'lucide-vue-next'
 
 export default defineComponent({
@@ -38,10 +43,19 @@ export default defineComponent({
   components: { Briefcase },
   setup() {
     const jobs = ref<any[]>([])
+    const showAllExperiences = ref(false)
+
+    const displayedJobs = computed(() => {
+      return showAllExperiences.value ? jobs.value : jobs.value.slice(0, 4)
+    })
+
+    const toggleShowExperiences = () => {
+      showAllExperiences.value = !showAllExperiences.value
+    }
 
     onMounted(async () => {
       try {
-        const response = await fetch('/experience.json')
+        const response = await fetch('./experience.json')
         if (!response.ok) {
           throw new Error('Failed to fetch experience data')
         }
@@ -51,7 +65,7 @@ export default defineComponent({
       }
     })
 
-    return { jobs }
+    return { jobs, showAllExperiences, displayedJobs, toggleShowExperiences }
   }
 })
 </script>
@@ -131,5 +145,40 @@ export default defineComponent({
 }
 .experience-list li {
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  /* Adjust experience section padding */
+  .experience-section {
+    padding: 3rem 1rem;
+  }
+
+  /* Adjust header layout for smaller screens */
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  /* Scale down the experience title font size */
+  .experience-title {
+    font-size: 1.75rem;
+  }
+
+  /* Adjust experience card padding and font sizes */
+  .experience-card {
+    padding: 0.75rem;
+  }
+  .experience-card-title {
+    font-size: 1.25rem;
+  }
+  .experience-card-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Adjust experience list font size */
+  .experience-list {
+    font-size: 0.9rem;
+  }
 }
 </style>

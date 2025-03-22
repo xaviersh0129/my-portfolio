@@ -10,19 +10,24 @@
       <!-- Grid of Skill Cards -->
       <div class="skills-grid">
         <div
-          v-for="skill in skills"
+          v-for="skill in displayedSkills"
           :key="skill"
           class="skill-card"
         >
           <p class="skill-text">{{ skill }}</p>
         </div>
       </div>
+      <div v-if="skills.length > 8" class="show-more-container" style="text-align: center; margin-top: 1rem;">
+        <button @click="toggleShowSkills" class="show-more-button" style="padding: 1rem 2rem; font-size: 1.25rem; border: none; background-color: #6366f1; color: #fff; border-radius: 0.5rem; cursor: pointer;">
+          {{ showAllSkills ? 'Show Less' : 'Show More' }}
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
+import { defineComponent, ref, computed, onMounted } from 'vue'
 import { Cpu } from 'lucide-vue-next'
 
 export default defineComponent({
@@ -30,10 +35,19 @@ export default defineComponent({
   components: { Cpu },
   setup() {
     const skills = ref<string[]>([])
+    const showAllSkills = ref(false)
+
+    const displayedSkills = computed(() => {
+      return showAllSkills.value ? skills.value : skills.value.slice(0, 8)
+    })
+
+    const toggleShowSkills = () => {
+      showAllSkills.value = !showAllSkills.value
+    }
 
     onMounted(async () => {
       try {
-        const response = await fetch('/skills.json')
+        const response = await fetch('./skills.json')
         if (!response.ok) {
           throw new Error('Failed to fetch skills list')
         }
@@ -43,7 +57,7 @@ export default defineComponent({
       }
     })
 
-    return { skills }
+    return { skills, showAllSkills, displayedSkills, toggleShowSkills }
   }
 })
 </script>
@@ -120,5 +134,29 @@ export default defineComponent({
   font-weight: 500; /* ~font-medium */
   color: #1f2937;   /* ~text-gray-800 */
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  /* Adjust skills section padding */
+  .skills-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Stack header elements vertically */
+  .skills-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  /* Scale down skills title font size */
+  .skills-title {
+    font-size: 1.75rem;
+  }
+  
+  /* Adjust skills grid to a single column layout */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
