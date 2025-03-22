@@ -1,0 +1,20 @@
+{
+  "introText": "I’m eager to connect with fellow innovators in quantitative finance and technology. As a Business Analytics student at NUS and a Quantitative Researcher at NUS Fintech Society, I leverage advanced machine learning and data analytics to drive actionable insights. Whether you’re interested in collaboration or exploring new opportunities, let’s connect!",
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/huashiaohong/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/xaviersh0129",
+      "icon": "github"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/xavierhua00/",
+      "icon": "instagram"
+    }
+  ]
+}

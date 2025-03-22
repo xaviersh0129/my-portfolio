@@ -1,0 +1,270 @@
+/* -------------------------------------------------------------------------- */
+/* 1. GLOBAL RESETS & BASE STYLES
+/* -------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scroll behavior */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Use the Google Font you imported */
+  color: #111827; /* text-gray-900 */
+  background-color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. ANIMATIONS
+/* -------------------------------------------------------------------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. NAVIGATION
+/* -------------------------------------------------------------------------- */
+
+/* If you're using a .navbar and .navbar-container structure, add these:
+   Otherwise, keep using .nav-link for your existing anchor styles. */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #6366f1; /* brand color (blue/purple) */
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.navbar-logo:hover {
+  opacity: 0.8;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: #374151; /* text-gray-700 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #111827; /* text-gray-900 */
+}
+
+/* Existing nav-link styling (if you still use .nav-link anchors) */
+.nav-link {
+  position: relative;
+  color: #4B5563; /* text-gray-600 */
+  transition: color 200ms;
+}
+
+.nav-link:hover {
+  color: #111827; /* text-gray-900 */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb; /* blue-600 */
+  transition: width 200ms;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. HERO SECTION
+/* -------------------------------------------------------------------------- */
+
+.hero-section {
+  background-color: #fafafa; /* Light background */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Profile wrapper for the circle image + small icon overlay */
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.code-icon {
+  position: absolute;
+  right: -0.75rem;
+  bottom: -0.75rem;
+  background-color: #6366f1;
+  color: #fff;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Hero text styling */
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280; /* text-gray-500 */
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+/* Hero buttons container */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5. BUTTONS
+/* -------------------------------------------------------------------------- */
+
+.btn {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #e5e7eb; /* ~gray-200 */
+  color: #374151;            /* ~gray-700 */
+  background-color: #fff;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 6. UTILITY / SHARED CLASSES
+/* -------------------------------------------------------------------------- */
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(to right, #2563eb, #7e22ce); /* from-blue-600 to-purple-600 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 300ms;
+}
+
+.card-hover:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Skill tag styling */
+.skill-tag {
+  padding: 0.25rem 0.75rem; /* ~py-1, px-3 */
+  background-color: #eff6ff; /* blue-50 */
+  color: #2563eb;            /* blue-600 */
+  border-radius: 9999px;     /* fully rounded */
+  font-size: 0.875rem;       /* text-sm */
+  font-weight: 500;          /* font-medium */
+  transition: background-color 200ms;
+}
+
+.skill-tag:hover {
+  background-color: #dbeafe; /* blue-100 */
+}
+
+/* Social link styling */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* ~gap-2 */
+  color: #4B5563; /* text-gray-600 */
+  transition: color 200ms, transform 200ms;
+}
+
+.social-link:hover {
+  color: #2563eb; /* text-blue-600 */
+  transform: scale(1.05);
+}
