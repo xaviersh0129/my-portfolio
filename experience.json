@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Quantitative Researcher",
+    "company": "NUS Fintech Society",
+    "period": "Aug 2024 – Present",
+    "achievements": [
+      "Developing and optimizing quantitative trading models using advanced statistical algorithms and machine learning techniques",
+      "Collaborating with cross-functional teams to enhance model accuracy, improving performance by 30%",
+      "Utilizing custom research infrastructure for simulation and validation"
+    ]
+  },
+  {
+    "title": "Teaching Assistant",
+    "company": "National University of Singapore",
+    "period": "Aug 2024 – Dec 2024",
+    "achievements": [
+      "Taught 30 freshmen in Business Analytics, leading to a significant boost in engagement",
+      "Conducted personalized consultations to enhance individual comprehension of analytical techniques",
+      "Collaborated with faculty to develop innovative teaching methods tailored to diverse learning styles"
+    ]
+  },
+  {
+    "title": "Technical Analyst",
+    "company": "NUS Fintech Society",
+    "period": "Jan 2024 – Aug 2024",
+    "achievements": [
+      "Analyzed and forecasted stock prices using ML models, achieving 25% increase in prediction reliability",
+      "Engineered efficient data scraping pipeline, reducing retrieval time by 30%",
+      "Developed an interactive web application using Flask for data visualization"
+    ]
+  },
+  {
+    "title": "Machine Learning Trainee",
+    "company": "NUS Fintech Society",
+    "period": "Sep 2023 – Jan 2024",
+    "achievements": [
+      "Conducted stock price predictions using ARIMA/ML models and NLP sentiment analysis",
+      "Enhanced trading signals accuracy by 20% through iterative testing",
+      "Documented and presented research findings to peers"
+    ]
+  },
+  {
+    "title": "Real Estate Consultant (Pre-Leader)",
+    "company": "MCentury Properties Sdn Bhd",
+    "period": "Jun 2019 – Jul 2022",
+    "achievements": [
+      "Promoted to Pre-Leader after achieving personal sales milestones within 2 years",
+      "Led a small team of 4 and ranked among the top 9 in personal sales by employing proactive strategies",
+      "Initiated and optimized processes to streamline client interactions and improve sales performance"
+    ]
+  }
+]
