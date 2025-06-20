@@ -1,8 +1,18 @@
 [
   {
+    "title": "Business Analytics Intern",
+    "company": "Munich Re",
+    "period": "July 2025 – Present",
+    "achievements": [
+      "Data Pipeline Automation: Built and maintained data pipelines using Python, SQL, PowerBI, and Databricks with a focus on data quality and integrity.",
+      "Dashboard Development: Designed interactive dashboards to visualize client data and deliver actionable business insights.",
+      "Treaty Monitoring: Supported treaty performance tracking and analytics as part of the Key Treaty Monitoring (KTM) project."
+    ]
+  },
+  {
     "title": "Quantitative Researcher",
     "company": "NUS Fintech Society",
-    "period": "Aug 2024 – Present",
+    "period": "Sep 2023 – Present",
     "achievements": [
       "Developing and optimizing quantitative trading models using advanced statistical algorithms and machine learning techniques",
       "Collaborating with cross-functional teams to enhance model accuracy, improving performance by 30%",
@@ -17,26 +27,6 @@
       "Taught 30 freshmen in Business Analytics, leading to a significant boost in engagement",
       "Conducted personalized consultations to enhance individual comprehension of analytical techniques",
       "Collaborated with faculty to develop innovative teaching methods tailored to diverse learning styles"
-    ]
-  },
-  {
-    "title": "Technical Analyst",
-    "company": "NUS Fintech Society",
-    "period": "Jan 2024 – Aug 2024",
-    "achievements": [
-      "Analyzed and forecasted stock prices using ML models, achieving 25% increase in prediction reliability",
-      "Engineered efficient data scraping pipeline, reducing retrieval time by 30%",
-      "Developed an interactive web application using Flask for data visualization"
-    ]
-  },
-  {
-    "title": "Machine Learning Trainee",
-    "company": "NUS Fintech Society",
-    "period": "Sep 2023 – Jan 2024",
-    "achievements": [
-      "Conducted stock price predictions using ARIMA/ML models and NLP sentiment analysis",
-      "Enhanced trading signals accuracy by 20% through iterative testing",
-      "Documented and presented research findings to peers"
     ]
   },
   {

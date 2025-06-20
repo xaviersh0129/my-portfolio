@@ -4,7 +4,11 @@
       "image": "./images/nus.png",
       "imageAlt": "NUS",
       "degree": "Bachelor of Science in Business Analytics",
-      "minor": "Quantitative Finance",
-      "gpa": "4.75/5.0 Honours (Highest Distinction)"
+      "gpa": "4.75/5.0 Honours (Highest Distinction)",
+      "achievements": [
+        "Dean's List AY24/25",
+        "NOC London Scholar",
+        "NUS Datathon 2025 Winner"
+      ]
     }
   ]
