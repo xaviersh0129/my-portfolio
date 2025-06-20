@@ -28,8 +28,8 @@
           <p class="education-degree">
             {{ item.degree }}
           </p>
-          <p class="education-minor">
-            Minor in {{ item.minor }}
+          <p class="education-achievements">
+            Achievements: {{ item.achievements.join(', ') }}
           </p>
           <p class="education-gpa">
             GPA: {{ item.gpa }}
@@ -171,7 +171,7 @@ export default defineComponent({
   margin: 0;
 }
 
-.education-minor,
+.education-achievements,
 .education-gpa {
   color: #4b5563; /* ~text-gray-600 */
   font-size: 16px; /* ~text-base */

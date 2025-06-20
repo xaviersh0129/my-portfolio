@@ -4,7 +4,11 @@
       "image": "./images/nus.png",
       "imageAlt": "NUS",
       "degree": "Bachelor of Science in Business Analytics",
-      "minor": "Quantitative Finance",
-      "gpa": "4.75/5.0 Honours (Highest Distinction)"
+      "gpa": "4.75/5.0 Honours (Highest Distinction)",
+      "achievements": [
+        "Dean's List (AY2425S2)",
+        "NUS Overseas College (London) 2026",
+        "NUS Business Analytics Society President 2021-2022"
+      ]
     }
   ]
