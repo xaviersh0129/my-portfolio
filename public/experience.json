@@ -1,22 +1,32 @@
 [
-    {
+  {
+    "title": "Data Operations Analyst Intern",
+    "company": "Credit Benchmark",
+    "period": "Jan 2026 – Dec 2026",
+    "achievements": [
+      "Automated data quality checks across 100k+ credit-risk records to detect anomalies, missing fields, and inconsistent inputs, reducing manual review time by 40%.",
+      "Developed an entity matching engine combining string similarity, rule-based logic, and machine learning techniques to standardize company entities across 20+ data sources, improving match consistency by 25%.",
+      "Converted recurring validation, reconciliation, and exception-flagging tasks into repeatable quality-control systems for financial data operations."
+    ]
+  },
+  {
     "title": "Business Analytics Intern",
     "company": "Munich Re",
-    "period": "July 2025 – Present",
+    "period": "Jul 2025 – Dec 2025",
     "achievements": [
-      "Data Pipeline Automation: Built and maintained data pipelines using Python, SQL, PowerBI, and Databricks with a focus on data quality and integrity.",
-      "Dashboard Development: Designed interactive dashboards to visualize client data and deliver actionable business insights.",
-      "Treaty Monitoring: Supported treaty performance tracking and analytics as part of the Key Treaty Monitoring (KTM) project."
+      "Automated underwriting and claims data workflows using Python, SQL, Power BI, and Databricks, reducing manual Excel work and strengthening data quality controls.",
+      "Fine-tuned NER models and integrated in-house APIs to extract key information from 4,000+ unstructured underwriting notes, reducing manual extraction by 40%.",
+      "Built a RAG-based claim cause classification system using historical records, improving claim processing speed by 25% and supporting more consistent underwriting decisions."
     ]
   },
   {
     "title": "Quantitative Researcher",
     "company": "NUS Fintech Society",
-    "period": "Sep 2023 – Present",
+    "period": "Aug 2024 – Apr 2025",
     "achievements": [
-      "Developing and optimizing quantitative trading models using advanced statistical algorithms and machine learning techniques",
-      "Collaborating with cross-functional teams to enhance model accuracy, improving performance by 30%",
-      "Utilizing custom research infrastructure for simulation and validation"
+      "Developed benchmark portfolio optimization models using Modern Portfolio Theory, including Global Minimum Variance, Market Portfolio, and Risk Parity strategies.",
+      "Backtested portfolio strategies on 30 Dow Jones Industrial Average stocks from 2020 to 2025 to evaluate reinforcement learning-based trading approaches.",
+      "Built a self-developed GMV portfolio achieving 16.64% annualized return and 1.48 Sharpe Ratio, outperforming traditional benchmark strategies."
     ]
   },
   {
@@ -24,9 +34,9 @@
     "company": "National University of Singapore",
     "period": "Aug 2024 – Dec 2024",
     "achievements": [
-      "Taught 30 freshmen in Business Analytics, leading to a significant boost in engagement",
-      "Conducted personalized consultations to enhance individual comprehension of analytical techniques",
-      "Collaborated with faculty to develop innovative teaching methods tailored to diverse learning styles"
+      "Mentored 30 freshmen in R programming and core business analytics concepts, translating technical material into practical, accessible examples.",
+      "Provided personalized consultations to help students strengthen analytical thinking, coding fundamentals, and assignment performance.",
+      "Supported course delivery by reinforcing quantitative problem-solving skills and improving student engagement with business analytics topics."
     ]
   },
   {
@@ -34,9 +44,9 @@
     "company": "MCentury Properties Sdn Bhd",
     "period": "Jun 2019 – Jul 2022",
     "achievements": [
-      "Promoted to Pre-Leader after achieving personal sales milestones within 2 years",
-      "Led a small team of 4 and ranked among the top 9 in personal sales by employing proactive strategies",
-      "Initiated and optimized processes to streamline client interactions and improve sales performance"
+      "Promoted to Pre-Leader within 2 years after exceeding personal sales milestones and demonstrating consistent client acquisition performance.",
+      "Coordinated a 4-person team and ranked among the top 9 in personal sales by tailoring client approaches using behavioral insights.",
+      "Initiated process improvements to streamline client interactions, improve follow-up discipline, and strengthen sales conversion efficiency."
     ]
   }
 ]
