@@ -1,5 +1,5 @@
-I am a Business Analytics undergraduate at the National University of Singapore, with a Minor in Quantitative Finance and a focus on applying data science, machine learning, and automation to finance.
+I am a Business Analytics undergraduate at NUS, with a Minor in Quantitative Finance and a focus on applying data science, machine learning, and automation to finance.
 
-My experience spans financial data operations, insurance analytics, quantitative research, and teaching. At Credit Benchmark, I work on automating data quality checks, entity matching, and validation workflows for credit-risk data. Previously at Munich Re, I built data pipelines, dashboards, NLP workflows, and AI-driven classification systems for underwriting and claims analytics.
+My experience spans credit-risk data operations at Credit Benchmark, insurance analytics at Munich Re, quantitative research, and teaching. I have built projects across market event analysis, trading strategies, recommendation systems, NLP trust analysis, and multi-agent AI simulations.
 
-Beyond internships, I have worked on portfolio optimization, reinforcement learning trading strategies, recommendation systems, NLP trust analysis, and market event decision tools. I am also a Dean’s List student, NUS Datathon 2025 winner, and NUS Overseas Colleges London 2026 participant, exploring the intersection of fintech, AI, entrepreneurship, and venture-building.
+I am also a Dean’s List student, NUS Datathon 2025 winner, and NOC London 2026 participant exploring fintech, AI, entrepreneurship, and venture-building.
