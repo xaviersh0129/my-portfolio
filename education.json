@@ -1,14 +1,15 @@
 [
-    {
-      "university": "National University of Singapore",
-      "image": "./images/nus.png",
-      "imageAlt": "NUS",
-      "degree": "Bachelor of Science in Business Analytics",
-      "gpa": "4.75/5.0 Honours (Highest Distinction)",
-      "achievements": [
-        "Dean's List (AY24/25 Sem2)",
-        "NUS Overseas College (London) 2026",
-        "NUS Datathon 2025 Champion"
-      ]
-    }
-  ]
+  {
+    "university": "National University of Singapore",
+    "image": "./images/nus.png",
+    "imageAlt": "National University of Singapore logo",
+    "degree": "Bachelor of Science in Business Analytics",
+    "gpa": "CGPA: 4.8/5.0",
+    "achievements": [
+      "Dean's List: AY2024/2025 Semester 2 and AY2025/2026 Semester 1",
+      "NUS Overseas Colleges, London 2026",
+      "Kuok Foundation Study Award Scholar",
+      "NUS Datathon 2025 Champion"
+    ]
+  }
+]
