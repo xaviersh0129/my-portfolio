@@ -1,5 +1,12 @@
 [
   {
+  "title": "CompassGraph: Personal Career GraphRAG",
+  "image": "./images/compassgraph.jpg",
+  "description": "Built a local GraphRAG-based career decision system that transforms course knowledge, projects, work experience, and personal goals into a connected knowledge graph, then retrieves relevant relationships to generate personalized career paths, proof-of-work ideas, and next-step recommendations with an LLM.",
+  "tags": ["GraphRAG", "Knowledge Graph", "LLM", "Career Decision Support"],
+  "link": "https://github.com/xaviersh0129/CompassGraph"
+  },
+  {
     "title": "Market Event Decision System",
     "image": "./images/market_event_decision_system.jpg",
     "description": "Built an interactive Streamlit decision-support dashboard to study how major 2020–2025 market events affect cross-asset prices, volatility, and investor narratives across equities, bonds, gold, USD, sectors, and VIX.",
