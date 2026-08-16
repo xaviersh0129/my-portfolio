@@ -1,10 +1,10 @@
 [
   {
-  "title": "CompassGraph: Personal Career GraphRAG",
-  "image": "./images/compassgraph.jpg",
-  "description": "Built a local GraphRAG-based career decision system that transforms course knowledge, projects, work experience, and personal goals into a connected knowledge graph, then retrieves relevant relationships to generate personalized career paths, proof-of-work ideas, and next-step recommendations with an LLM.",
-  "tags": ["GraphRAG", "Knowledge Graph", "LLM", "Career Decision Support"],
-  "link": "https://github.com/xaviersh0129/CompassGraph"
+  "title": "Noema: Local Knowledge Graph & GraphRAG Workspace",
+  "image": "./images/noema.jpg",
+  "description": "Built a local-first knowledge workspace that transforms notes and documents into an interactive knowledge graph, combining AI-powered entity and relationship extraction, semantic search, and GraphRAG retrieval to answer questions with connected knowledge and source context. Includes configurable LLM providers, private user profiles, and a standalone public graph showcase.",
+  "tags": ["GraphRAG", "Knowledge Graph", "LLM", "Local AI"],
+  "link": "https://github.com/xaviersh0129/Noema"
   },
   {
     "title": "Market Event Decision System",
